@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.auth0</groupId>
+	<artifactId>scalability-lab02</artifactId>
+	<packaging>jar</packaging>
+	<version>1.0.0</version>
+	<name>jmeter</name>
+	<url>http://maven.apache.org</url>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>com.lazerycode.jmeter</groupId>
+				<artifactId>jmeter-maven-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<testResultsTimestamp>false</testResultsTimestamp>
+          <ignoreResultFailures>true</ignoreResultFailures>
+					<jmeterVersion>3.3</jmeterVersion>
+					<ignoreResultFailures>false</ignoreResultFailures>
+					<scanResultsForFailedRequests>true</scanResultsForFailedRequests>
+				  <scanResultsForSuccessfulRequests>true</scanResultsForSuccessfulRequests>
+				  <resultsDirectory>${project.build.directory}/jmeter/results</resultsDirectory>
+				  <suppressJMeterOutput>false</suppressJMeterOutput>
+				  <overrideRootLogLevel>debug</overrideRootLogLevel>
+				  <propertiesUser>
+						  <targetUrl>localhost:3000</targetUrl>
+				  </propertiesUser>
+				</configuration>
+				<executions>
+					<execution>
+						<id>jmeter-tests</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jmeter</goal>
+							<goal>results</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

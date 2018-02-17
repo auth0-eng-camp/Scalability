@@ -1,0 +1,35 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "ubuntu/xenial64"
+
+  config.vm.network "forwarded_port", guest: 5000, host: 5000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
+  
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+  end
+
+  config.vm.provision "shell", inline: <<-SHELL
+    sudo apt-get install -y build-essential
+    curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+
+    # enabling upstart
+    sudo apt-get install -y upstart-sysv
+    sudo update-initramfs -u
+    sudo apt-get purge systemd -y
+    # reboot, shutdown -r now
+
+    # app installation
+    # cd /opt
+    # sudo git clone https://github.com/auth0-eng-camp/scalability-lab01.git passwordapi
+    # cd passwordapi
+    # sudo npm install
+    # sudo cp passwordapi /etc/init
+    # sudo service password status
+    
+  SHELL
+end
