@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cd PasswordApi
+cd PasswordApp
 npm install
 npm test
