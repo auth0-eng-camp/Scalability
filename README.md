@@ -1,5 +1,7 @@
 # Scalability
 
+[![Build Status](https://travis-ci.org/auth0-eng-camp/Scalability.svg?branch=master)](https://travis-ci.org/auth0-eng-camp/Scalability)
+
 Resources and code for the Scalability camp
 
 * PasswordApp constains the code of the application used in the first part of the camp
