@@ -1,0 +1,33 @@
+{
+  "name": "bookmarks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bin/web.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha",
+    "migrate": "./node_modules/.bin/node-pg-migrate up",
+    "scheduler": "node ./bin/scheduler.js",
+    "worker": "node ./bin/worker.js",
+    "start": "node ./bin/web.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "async": "^2.6.0",
+    "aws-sdk": "^2.190.0",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "config": "^1.29.2",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.2",
+    "node-pg-migrate": "^2.17.0",
+    "pg": "^7.4.1",
+    "server-destroy": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chakram": "^1.5.0",
+    "mocha": "^5.0.0"
+  }
+}
