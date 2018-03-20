@@ -1,6 +1,4 @@
-# scalability-lab01
-
-[![Build Status](https://travis-ci.org/auth0-eng-camp/scalability-lab01.svg?branch=master)](https://travis-ci.org/auth0-eng-camp/scalability-lab01)
+# Scalability Camp: Password App
 
 Password API provides the following features:
 

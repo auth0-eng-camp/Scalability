@@ -1,4 +1,4 @@
-# Scalability Lab 04
+# Scalability Camp: Auto Scaling Lab
 
 In this lab we are going to work on auto scaling an application.
 

@@ -1,8 +1,19 @@
-# scalability-lab05: Bookmarks System
+# Scalability Camp: Bookmarks App
 
-[![Build Status](https://travis-ci.org/auth0-eng-camp/scalability-lab05.svg?branch=postgres_rabbit_solution_by_nicopaez)](https://travis-ci.org/auth0-eng-camp/scalability-lab05)
+This application consist in 3 components:
 
-This branch contains a possible solution for Bookmarks challenge. It is implemented with Postgresql and Rabbitmq.
+* A web API that exposes endpoints to manage bookmarks
+* A scheduler worker app that send messages to a queue and periodically monitors the queue size
+* A worker app that consumes the queue and process items
+
+
+## Required infrastructure
+
+The application depends on the following components:
+
+* PostgreSQL
+* RabbitMQ
+* NodeJS
 
 To create the required databased use the following commands:
 ```

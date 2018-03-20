@@ -1,4 +1,4 @@
-# Scalability Lab 03
+# Scalability Camp: Load Balacing with NGINX Lab
 
 In this lab we are going to work on load balancing multiple instances of the same application.
 

@@ -1,4 +1,4 @@
-# Scalability Lab 02
+# Scalability Camp: JMeter Lab
 
 Generate stress test scripts for the Password API developed in Lab 01.
 
