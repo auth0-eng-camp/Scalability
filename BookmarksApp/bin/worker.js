@@ -32,7 +32,6 @@ function start() {
           if (!err) {
             const checksum = hash(resp.body);
           }
-          console.log(options.url);
           bookmarksDB.updateStatus({ id: bookmark.id, is_ok: isOkay }, function (ex) {
             if (ex) {
               console.error(ex);

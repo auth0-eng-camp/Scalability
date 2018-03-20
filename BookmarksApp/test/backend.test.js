@@ -46,7 +46,6 @@ describe('End2End test', function () {
     setTimeout(() => {
       bookmarks.findById(bm1.id, function(err, result) {
         if (err) done(err);
-        console.log(result);
         expect(result.is_ok).to.be.true;
         done(null);
       })
