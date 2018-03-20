@@ -4,7 +4,7 @@
   "description": "",
   "main": "./bin/web.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/api.bookmarks.test.js test/db.bookmarks.test.js test/backend.test.js",
     "migrate": "./node_modules/.bin/node-pg-migrate up",
     "scheduler": "node ./bin/scheduler.js",
     "worker": "node ./bin/worker.js",
