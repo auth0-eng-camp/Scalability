@@ -9,4 +9,5 @@ env:
   - NODE_ENV=ci
 before_script:
   - psql -c 'create database bookmarks;' -U postgres
+  - cd BookmarksApp
   - npm run migrate
