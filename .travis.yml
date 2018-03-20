@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "8"
-script: bash ./build.sh
+script: bash ./build_all.sh
 services:
   - postgresql
   - rabbitmq
@@ -9,5 +9,3 @@ env:
   - NODE_ENV=ci
 before_script:
   - psql -c 'create database bookmarks;' -U postgres
-  - cd BookmarksApp
-  - npm run migrate
