@@ -27,7 +27,7 @@ Remember to allow traffic for port 80 instead of port 3000 for the Nginx instanc
 After launching the instance, make sure `Nginx` is working by pointing your web browser at the instance domain or IP address.
 
 ### Configure Nginx
-To configure Nginx we have to create a `default.config` file and put it inside the `/etc/nginx/conf.d/` folder in the Nginx instance.
+To configure Nginx we have to create a `default.conf` file and put it inside the `/etc/nginx/conf.d/` folder in the Nginx instance.
 
 Your config file should be similar to [this one](nginx/default.conf). Just change the URLs to match the ones of your intances.
 
